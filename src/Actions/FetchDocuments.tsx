@@ -14,7 +14,7 @@ export const FetchDocuments = () => {
       const data = await res.json();
 
       const documents = data.reduce(
-        (acc, doc) => ({ ...acc, [doc.id]: doc }),
+        (acc: any, doc: any) => ({ ...acc, [doc.id]: doc }),
         {}
       );
 

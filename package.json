@@ -13,7 +13,6 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
-    "@flowerforce/devtool": "file:../flower/packages/flower-devtool/dist",
     "@flowerforce/flower-core": "4.0.1-beta.10",
     "@flowerforce/flower-react": "4.0.11-beta.2",
     "@flowerforce/flower-react-form": "4.0.11-beta.2",

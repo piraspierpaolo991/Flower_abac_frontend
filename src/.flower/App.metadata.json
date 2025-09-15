@@ -1,0 +1,370 @@
+{
+  "//": "Do not publish this file",
+  "type": "flow",
+  "name": "flow",
+  "layout": "horizontal",
+  "apps": [
+    "login",
+    "login-action",
+    "fetch-documents",
+    "dashboard",
+    "can-perform-action",
+    "read-document",
+    "retrieve-document",
+    "delete-document",
+    "detail",
+    "detail-update",
+    "update-document",
+    "deleted-document",
+    "operation-denied"
+  ],
+  "elements": {
+    "login": {
+      "id": "login",
+      "position": {
+        "x": -4468.5960833763465,
+        "y": 432.4102689907381
+      },
+      "animated": false,
+      "_metadata": {},
+      "type": "FlowerNode",
+      "sourceType": "FlowerNode"
+    },
+    "login-action": {
+      "id": "login-action",
+      "position": {
+        "x": -4088.3560748266523,
+        "y": 424.025787463518
+      },
+      "animated": false,
+      "_metadata": {},
+      "type": "FlowerAction",
+      "sourceType": "FlowerAction"
+    },
+    "fetch-documents": {
+      "id": "fetch-documents",
+      "position": {
+        "x": -3727.3488554619707,
+        "y": 415.79476638490905
+      },
+      "animated": false,
+      "_metadata": {},
+      "type": "FlowerAction",
+      "sourceType": "FlowerAction"
+    },
+    "dashboard": {
+      "id": "dashboard",
+      "position": {
+        "x": -3354.8915283443503,
+        "y": 413.89833545667284
+      },
+      "animated": false,
+      "_metadata": {},
+      "type": "FlowerNode",
+      "sourceType": "FlowerNode"
+    },
+    "can-perform-action": {
+      "id": "can-perform-action",
+      "position": {
+        "x": -2931.8264893934256,
+        "y": 418.12116087259153
+      },
+      "animated": false,
+      "_metadata": {},
+      "type": "FlowerAction",
+      "sourceType": "FlowerAction"
+    },
+    "read-document": {
+      "id": "read-document",
+      "position": {
+        "x": -2229.980876691472,
+        "y": 365.71655857342364
+      },
+      "animated": false,
+      "_metadata": {},
+      "type": "FlowerAction",
+      "sourceType": "FlowerAction"
+    },
+    "retrieve-document": {
+      "id": "retrieve-document",
+      "position": {
+        "x": -2237.9015561974156,
+        "y": 704.4362969856468
+      },
+      "animated": false,
+      "_metadata": {},
+      "type": "FlowerAction",
+      "sourceType": "FlowerAction"
+    },
+    "delete-document": {
+      "id": "delete-document",
+      "position": {
+        "x": -2235.1421768266932,
+        "y": 534.976124121016
+      },
+      "animated": false,
+      "_metadata": {},
+      "type": "FlowerAction",
+      "sourceType": "FlowerAction"
+    },
+    "detail": {
+      "id": "detail",
+      "position": {
+        "x": -1885.9943416397477,
+        "y": 364.62340931331005
+      },
+      "animated": false,
+      "_metadata": {},
+      "type": "FlowerNode",
+      "sourceType": "FlowerNode"
+    },
+    "detail-update": {
+      "id": "detail-update",
+      "position": {
+        "x": -1886.5298151904217,
+        "y": 704.1885859368343
+      },
+      "animated": false,
+      "_metadata": {},
+      "type": "FlowerNode",
+      "sourceType": "FlowerNode"
+    },
+    "update-document": {
+      "id": "update-document",
+      "position": {
+        "x": -1543.099703744664,
+        "y": 704.2761684140547
+      },
+      "animated": false,
+      "_metadata": {},
+      "type": "FlowerAction",
+      "sourceType": "FlowerAction"
+    },
+    "deleted-document": {
+      "id": "deleted-document",
+      "position": {
+        "x": -1887.9058553546788,
+        "y": 536.1041256439598
+      },
+      "animated": false,
+      "_metadata": {},
+      "type": "FlowerNode",
+      "sourceType": "FlowerNode"
+    },
+    "operation-denied": {
+      "id": "operation-denied",
+      "position": {
+        "x": -2446.1719205302693,
+        "y": -114.87898613909505
+      },
+      "animated": false,
+      "_metadata": {},
+      "type": "FlowerNode",
+      "sourceType": "FlowerNode"
+    },
+    "reactflow__edge-login-login-action": {
+      "id": "reactflow__edge-login-login-action",
+      "label": "◈",
+      "position": {
+        "x": null,
+        "y": null
+      },
+      "animated": false,
+      "style": {
+        "stroke": "#97A3AC"
+      },
+      "labelStyle": {
+        "fill": "#97A3AC"
+      },
+      "_metadata": {}
+    },
+    "reactflow__edge-login-action-fetch-documents": {
+      "id": "reactflow__edge-login-action-fetch-documents",
+      "label": "+",
+      "position": {
+        "x": null,
+        "y": null
+      },
+      "animated": false,
+      "style": {
+        "stroke": "#97A3AC"
+      },
+      "labelStyle": {
+        "fill": "#97A3AC"
+      },
+      "_metadata": {}
+    },
+    "reactflow__edge-fetch-documents-dashboard": {
+      "id": "reactflow__edge-fetch-documents-dashboard",
+      "label": "+",
+      "position": {
+        "x": null,
+        "y": null
+      },
+      "animated": false,
+      "style": {
+        "stroke": "#97A3AC"
+      },
+      "labelStyle": {
+        "fill": "#97A3AC"
+      },
+      "_metadata": {}
+    },
+    "reactflow__edge-dashboard-can-perform-action": {
+      "id": "reactflow__edge-dashboard-can-perform-action",
+      "label": "◈",
+      "position": {
+        "x": null,
+        "y": null
+      },
+      "animated": false,
+      "style": {
+        "stroke": "#97A3AC"
+      },
+      "labelStyle": {
+        "fill": "#97A3AC"
+      },
+      "_metadata": {}
+    },
+    "reactflow__edge-can-perform-action-read-document": {
+      "id": "reactflow__edge-can-perform-action-read-document",
+      "label": "Can Read",
+      "position": {
+        "x": null,
+        "y": null
+      },
+      "animated": false,
+      "style": {
+        "stroke": "#47B881"
+      },
+      "labelStyle": {
+        "fill": "#47B881"
+      },
+      "_metadata": {
+        "status": "success",
+        "label": "Can Read"
+      }
+    },
+    "reactflow__edge-can-perform-action-retrieve-document": {
+      "id": "reactflow__edge-can-perform-action-retrieve-document",
+      "label": "Can Update",
+      "position": {
+        "x": null,
+        "y": null
+      },
+      "animated": false,
+      "style": {
+        "stroke": "#47B881"
+      },
+      "labelStyle": {
+        "fill": "#47B881"
+      },
+      "_metadata": {
+        "status": "success",
+        "label": "Can Update"
+      }
+    },
+    "reactflow__edge-can-perform-action-delete-document": {
+      "id": "reactflow__edge-can-perform-action-delete-document",
+      "label": "Delete Document",
+      "position": {
+        "x": null,
+        "y": null
+      },
+      "animated": false,
+      "style": {
+        "stroke": "#47B881"
+      },
+      "labelStyle": {
+        "fill": "#47B881"
+      },
+      "_metadata": {
+        "label": "Delete Document",
+        "status": "success"
+      }
+    },
+    "reactflow__edge-can-perform-action-operation-denied": {
+      "id": "reactflow__edge-can-perform-action-operation-denied",
+      "label": "Operation Denied",
+      "position": {
+        "x": null,
+        "y": null
+      },
+      "animated": false,
+      "style": {
+        "stroke": "#EC4C47"
+      },
+      "labelStyle": {
+        "fill": "#EC4C47"
+      },
+      "_metadata": {
+        "status": "danger",
+        "label": "Operation Denied"
+      }
+    },
+    "reactflow__edge-read-document-detail": {
+      "id": "reactflow__edge-read-document-detail",
+      "label": "+",
+      "position": {
+        "x": null,
+        "y": null
+      },
+      "animated": false,
+      "style": {
+        "stroke": "#97A3AC"
+      },
+      "labelStyle": {
+        "fill": "#97A3AC"
+      },
+      "_metadata": {}
+    },
+    "reactflow__edge-retrieve-document-detail-update": {
+      "id": "reactflow__edge-retrieve-document-detail-update",
+      "label": "+",
+      "position": {
+        "x": null,
+        "y": null
+      },
+      "animated": false,
+      "style": {
+        "stroke": "#97A3AC"
+      },
+      "labelStyle": {
+        "fill": "#97A3AC"
+      },
+      "_metadata": {}
+    },
+    "reactflow__edge-delete-document-deleted-document": {
+      "id": "reactflow__edge-delete-document-deleted-document",
+      "label": "+",
+      "position": {
+        "x": null,
+        "y": null
+      },
+      "animated": false,
+      "style": {
+        "stroke": "#97A3AC"
+      },
+      "labelStyle": {
+        "fill": "#97A3AC"
+      },
+      "_metadata": {}
+    },
+    "reactflow__edge-detail-update-update-document": {
+      "id": "reactflow__edge-detail-update-update-document",
+      "label": "+",
+      "position": {
+        "x": null,
+        "y": null
+      },
+      "animated": false,
+      "style": {
+        "stroke": "#97A3AC"
+      },
+      "labelStyle": {
+        "fill": "#97A3AC"
+      },
+      "_metadata": {}
+    }
+  }
+}

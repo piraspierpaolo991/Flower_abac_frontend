@@ -1,0 +1,50 @@
+[
+  {
+    "id": "rule-1",
+    "description": "Gli admin possono fare tutto",
+    "effect": "Permit",
+    "action": ["read", "create", "update", "delete"],
+    "resource": "*",
+    "condition": "subject.role === 'admin'"
+  },
+  {
+    "id": "rule-1-1",
+    "description": "I super admin possono fare tutto",
+    "effect": "Permit",
+    "action": ["read", "create", "update", "delete"],
+    "resource": "*",
+    "condition": "subject.role === 'super'"
+  },
+  {
+    "id": "rule-2",
+    "description": "Gli utenti possono leggere solo documenti non confidenziali",
+    "effect": "Permit",
+    "action": ["read", "delete", "update"],
+    "resource": "*",
+    "condition": "subject.role === 'user' && resource.confidential === false"
+  },
+  {
+    "id": "rule-3",
+    "description": "Il proprietario può sempre aggiornare il proprio documento",
+    "effect": "Permit",
+    "action": ["update", "delete", "read"],
+    "resource": "*",
+    "condition": "resource.ownerID === subject.id"
+  },
+  {
+    "id": "rule-4",
+    "description": "Se un documento è locked nessuno può eliminarlo",
+    "effect": "Deny",
+    "action": ["delete"],
+    "resource": "*",
+    "condition": "resource.locked === true"
+  },
+  {
+    "id": "rule-5",
+    "description": "Gli utenti non possono fare login dopo le 15:15",
+    "effect": "Permit",
+    "action": ["login"],
+    "resource": "*",
+    "condition": "(subject.role === 'user' && (() => { const now = new Date(); return now.getHours() < 15 || (now.getHours() === 15 && now.getMinutes() <= 20); })()) || subject.role !== 'user'"
+  }
+]

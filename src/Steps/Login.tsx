@@ -59,7 +59,7 @@ export const Login = () => {
                   },
                 ],
               },
-              message: 'Users cannot login after 15:20',
+              message: 'Users cannot login after 15:30',
             },
           ]}
         >

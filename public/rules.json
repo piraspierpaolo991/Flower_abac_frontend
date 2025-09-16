@@ -45,6 +45,6 @@
     "effect": "Permit",
     "action": ["login"],
     "resource": "*",
-    "condition": "(subject.role === 'user' && (() => { const now = new Date(); return now.getHours() < 15 || (now.getHours() === 15 && now.getMinutes() <= 20); })()) || subject.role !== 'user'"
+    "condition": "(subject.role === 'user' && (() => { const now = new Date(); return now.getHours() < 15 || (now.getHours() === 15 && now.getMinutes() <= 30); })()) || subject.role !== 'user'"
   }
 ]

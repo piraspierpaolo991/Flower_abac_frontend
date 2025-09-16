@@ -19,7 +19,7 @@
     "id": "rule-2",
     "description": "Gli utenti possono leggere solo documenti non confidenziali",
     "effect": "Permit",
-    "action": ["read", "delete", "update"],
+    "action": ["read", "update"],
     "resource": "*",
     "condition": "subject.role === 'user' && resource.confidential === false"
   },
@@ -41,7 +41,7 @@
   },
   {
     "id": "rule-5",
-    "description": "Gli utenti non possono fare login dopo le 15:15",
+    "description": "Gli utenti non possono fare login dopo le 15:30",
     "effect": "Permit",
     "action": ["login"],
     "resource": "*",

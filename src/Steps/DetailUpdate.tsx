@@ -1,5 +1,3 @@
-import React from 'react'
-import { Layout } from '../components'
 import {
   Box,
   Button,
@@ -17,7 +15,6 @@ export const DetailUpdate = () => {
   const doc = getData('document')
 
   return (
-    <Layout>
       <Box p={4}>
         {/* Titolo + descrizione */}
         <Paper elevation={3} sx={{ p: 4, mb: 4 }}>
@@ -60,6 +57,5 @@ export const DetailUpdate = () => {
           </FlowerNavigate>
         </Stack>
       </Box>
-    </Layout>
   )
 }

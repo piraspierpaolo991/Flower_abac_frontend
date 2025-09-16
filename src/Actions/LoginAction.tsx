@@ -1,8 +1,9 @@
 import { setSubject } from '@flowerforce/flower-core'
 import { useFlower } from '@flowerforce/flower-react'
 import { useFlowerForm } from '@flowerforce/flower-react-form'
-import React, { useCallback, useEffect } from 'react'
+import { useEffect } from 'react'
 import { BASE_URL } from '../constants'
+import { Loader } from '../components/Loader'
 
 export const LoginAction = () => {
   const { getData, setData } = useFlowerForm()
@@ -19,12 +20,14 @@ export const LoginAction = () => {
       })
 
       const user = await res.json()
+      console.log("🚀 ~ api ~ user:", user)
 
       setSubject(user)
+      setData(user.id , 'userId')
 
       next()
     }
     api()
   }, [])
-  return <div>Loading...</div>
+  return <Loader />
 }

@@ -1,5 +1,3 @@
-import React from 'react'
-import { Layout } from '../components'
 import {
   Box,
   Button,
@@ -10,16 +8,13 @@ import {
 } from '@mui/material'
 import { useFlowerForm } from '@flowerforce/flower-react-form'
 import { FlowerNavigate } from '@flowerforce/flower-react'
-import { getSubject } from '@flowerforce/flower-core'
 
 export const Detail = () => {
   const { getData } = useFlowerForm()
 
   const doc = getData('document')
-  const usr = getSubject()
 
   return (
-    <Layout>
       <Box p={4}>
         <Paper elevation={3} sx={{ p: 4, mb: 4 }}>
           <Stack spacing={2}>
@@ -48,6 +43,5 @@ export const Detail = () => {
           </FlowerNavigate>
         </Box>
       </Box>
-    </Layout>
   )
 }

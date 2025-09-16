@@ -1,7 +1,8 @@
-import { useAbac, useFlower } from '@flowerforce/flower-react'
+import { useFlower } from '@flowerforce/flower-react'
 import { useFlowerForm } from '@flowerforce/flower-react-form'
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { BASE_URL } from '../constants'
+import { Loader } from '../components/Loader'
 
 export const DeleteDocumentAction = () => {
   const { getData } = useFlowerForm()
@@ -19,5 +20,5 @@ export const DeleteDocumentAction = () => {
     api()
   }, [])
 
-  return <div>Loading...</div>
+  return <Loader />
 }

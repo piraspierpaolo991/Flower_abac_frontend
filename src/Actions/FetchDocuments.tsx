@@ -1,8 +1,8 @@
-import { setSubject } from '@flowerforce/flower-core';
 import { useFlower } from '@flowerforce/flower-react';
 import { useFlowerForm } from '@flowerforce/flower-react-form';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { BASE_URL } from '../constants';
+import { Loader } from '../components/Loader';
 
 export const FetchDocuments = () => {
   const { setData } = useFlowerForm();
@@ -24,5 +24,5 @@ export const FetchDocuments = () => {
     };
     api();
   }, []);
-  return <div>Loading...</div>;
+  return <Loader />;
 };

@@ -11,12 +11,29 @@ import {
 } from '@mui/material';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { InfoPage } from '../../Steps/InfoPage';
+import { getRawRules } from '@flowerforce/flower-core';
 
 export const InfoBox = () => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const abacRules = getRawRules();
+  const handleDownload = () => {
+    if (!abacRules) return;
+    const blob = new Blob([JSON.stringify(abacRules, null, 2)], {
+      type: 'application/json',
+    });
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'abac-rules.json';
+    link.click();
+
+    URL.revokeObjectURL(url);
+  };
 
   return (
     <>
@@ -34,7 +51,7 @@ export const InfoBox = () => {
         fullWidth
         maxWidth="md"
         PaperProps={{
-          sx: {  display: 'flex', flexDirection: 'column' },
+          sx: { display: 'flex', flexDirection: 'column' },
         }}
       >
         <DialogTitle>Access Control Rules (ABAC)</DialogTitle>
@@ -55,7 +72,13 @@ export const InfoBox = () => {
             p: 2,
           }}
         >
-          <Box sx={{ width: '100%', textAlign: 'center' }}>
+          <Box sx={{ display: 'flex', width: '100%', justifyContent: 'space-between' }}>
+            <Button
+              variant="outlined"
+              onClick={handleDownload}
+            >
+              Download Rules
+            </Button>
             <Button variant="contained" color="primary" onClick={handleClose}>
               Close
             </Button>

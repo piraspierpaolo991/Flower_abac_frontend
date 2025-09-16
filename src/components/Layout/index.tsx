@@ -22,7 +22,7 @@ export const Layout = ({ children }: PropsWithChildren) => {
       <AppBar position="static" sx={{ backgroundColor: '#171010' }}>
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           <Stack direction="row" gap={2}>
-            <img src="/public/flower-logo.svg" alt="Flower logo" />
+            <img src="/flower-logo.svg" alt="Flower logo" />
             <Typography variant="h6" component="div">
               Flower ABAC Test
             </Typography>
